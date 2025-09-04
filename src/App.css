@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .scroll-offset {
+    scroll-margin-top: 10rem;
+  }
+
+  @media (min-width: 768px) {
+    .scroll-offset {
+      scroll-margin-top: 5rem;
+    }
+  }
+}
+
+@layer components{
+  .header-link{
+    @apply text-neutral-500 dark:text-neutral-400 hover:text-blue-500 dark:hover:text-gray-500 font-bold text-lg m-2 cursor-pointer
+  }
+
+
+  .bg{
+    @apply bg-white dark:bg-neutral-900 w-full px-6 py-50 h-auto flex flex-col items-center
+  }
+  .h1-title{
+    @apply text-neutral-950 dark:text-neutral-300 text-5xl font-bold pb-5
+  }
+  .h3-title{
+    @apply text-blue-500 dark:text-gray-500 text-2xl font-bold pb-4
+  }
+  .text-style{
+    @apply text-neutral-500 dark:text-neutral-400 font-medium max-w-[700px] cursor-default 
+  }
+
+  .skill-list{
+    @apply flex flex-col gap-3 w-full cursor-default
+  }
+  .h4-title{
+    @apply text-neutral-950 dark:text-neutral-300 text-lg font-bold cursor-default flex flex-col gap-6 sm:flex-row sm:gap-20 items-start md:items-center
+  }
+}
